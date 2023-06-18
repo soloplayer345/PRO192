@@ -41,11 +41,18 @@ public class StudentManager {
         for (int i = 0; i <numOfStudent; i++) {
             if (studentList[i].getmID().equals(ID)) {
                 System.out.println(studentList[i].toString());
+                result=i;
             }
         }
         return result;
     }
-    public void updateStudent(Student newStudent){//tìm sinh viên rồi update lại cái sinh viên theo id đó nếu ko có ghi not found
-//        findStudent();
+    public void updateStudent(String ID,Student newStudent){//tìm sinh viên rồi update lại cái sinh viên theo id đó nếu ko có ghi not found
+        int index = findStudent(ID);
+    if (index != -1) {
+        studentList[index] = newStudent;
+        System.out.println("Student updated successfully!");
+    } else {
+        System.out.println("Student not found!");
+    }
     }
 }

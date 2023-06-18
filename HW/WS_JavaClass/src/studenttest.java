@@ -16,7 +16,7 @@ public class studenttest {
 
     public static void main(String[] args) {
         int choice;
-        String ID = null, FullName, Address, Phone;
+        String ID, FullName, Address, Phone;
         Date DoB = null;
         Scanner sc = new Scanner(System.in);
         StudentManager stdManager = new StudentManager();
@@ -59,8 +59,7 @@ public class studenttest {
                     stdManager.findStudent(result);
                     break;
                 case 4:
-//                    stdManager.updateStudent(newStudent);
-                    break;
+                   break;
                 case 5:
                     System.exit(0);
                     break;
