@@ -25,12 +25,13 @@ public class MyString implements IString{
 
     @Override
     public String f2(String string) {
-//        String[] arr = string.split(" ");
-//        int count =0;
-//        for (String string1 : arr) {
-//            if(string1.charAt(count))
-//        }
-return null; 
+        String[] arr = string.split(" ");
+        for (String s : arr) {
+            if (new StringBuffer(s).reverse().toString().equals(s)){
+                return string.replaceFirst(s, "YY");
+            }
+        }
+return string; 
     }
     
 }
