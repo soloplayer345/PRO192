@@ -31,7 +31,7 @@ public class studenttest {
                                Select :""");
             choice = sc.nextInt();
             switch (choice) {
-                case 1:
+                case 1 -> {
                     System.out.print("enter ID:");
                     ID = sc.next();
                     System.out.print("Full name:");
@@ -41,7 +41,6 @@ public class studenttest {
                     try {
                         DoB = f.parse(sc.next());
                     } catch (ParseException ex) {
-                        ex.printStackTrace();
                     }
                     System.out.print("Address:");
                     Address = sc.next();
@@ -49,21 +48,19 @@ public class studenttest {
                     Phone = sc.next();
                     Student newStudent = new Student(ID, FullName, DoB, Phone, Address);
                     stdManager.addStudent(newStudent);
-                    break;
-                case 2:
+                }
+                case 2 ->
                     stdManager.printStudentList();
-                    break;
-                case 3:
+                case 3 -> {
                     System.out.print("ID you want to find: ");
                     String result = sc.next();
                     stdManager.findStudent(result);
-                    break;
-                case 4:
-                   break;
-                case 5:
+                }
+                case 4 -> {
+                }
+                case 5 ->
                     System.exit(0);
-                    break;
-                default:
+                default ->
                     System.out.println("please try again");
             }
         } while (true);

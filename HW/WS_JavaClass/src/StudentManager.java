@@ -43,6 +43,9 @@ public class StudentManager {
                 System.out.println(studentList[i].toString());
                 result=i;
             }
+            else{
+                System.out.println("ID not found");
+            }
         }
         return result;
     }
