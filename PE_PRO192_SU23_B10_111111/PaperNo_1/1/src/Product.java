@@ -28,9 +28,18 @@ public class Product {
 
     public void setDiscount(int discount) {
         this.discount = discount;
+        System.out.println(this.id);
+        System.out.println(this.discount);
     }
 
     public double subTotal() {
-        return (quantity * price) * ((100 - discount) / 100);
+        System.out.println("quatity"+this.quantity);
+        System.out.println("price"+this.price);
+        System.out.println("discount"+this.discount);
+        double result;
+        double d= this.discount;
+        result= (d/100.0);
+        System.out.println("result"+result);
+        return result;
     }
 }
