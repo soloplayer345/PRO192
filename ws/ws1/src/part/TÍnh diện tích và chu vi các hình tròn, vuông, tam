@@ -1,0 +1,9 @@
+TÍnh diện tích và chu vi các hình tròn, vuông, tam giác dùng OOP trong đó liệt kê các tính chất có xài
+-Tính Đa Hình
+-Tính Kế Thừa
+-Tính đóng gói
+-Tính trừu tượng
+dùng tính kế thừa + trừu tượng
+gợi ý:
+1 interface chứa 2 hàm chu vi và diện tích => 3 class hình tròn ,vuông, tam giác kế thừa và override lại 2 hàm kia 
+đổi hàm main để chạy đúng
