@@ -16,10 +16,10 @@ public class Vehicle {
     private int quantity;
 
     public Vehicle() {
-        id="";
-        name="";
-        price=0;
-        quantity=0;
+        id = "";
+        name = "";
+        price = 0;
+        quantity = 0;
     }
 
     public Vehicle(String id, String name, double price, int quantity) {
@@ -34,10 +34,10 @@ public class Vehicle {
     }
 
     public void setQuantity(int quantity) {
-        if (quantity>=1 && quantity<=1000) {
+        if (quantity >= 1 && quantity <= 1000) {
             this.quantity = quantity;
         } else {
-            this.quantity=1;
+            this.quantity = 1;
         }
     }
 
@@ -46,8 +46,8 @@ public class Vehicle {
     }
 
     public void setId(String id) {
-        String pattern = "^V[0-9]{6}$";
-        if (!id.matches(pattern) || id.isBlank()) {
+        String pattern = "^[vV]\\d{6}$";
+        if (!id.matches(pattern) || id.isEmpty()) {
             this.id = "V000000";
         } else {
             this.id = id.toUpperCase();
@@ -60,7 +60,7 @@ public class Vehicle {
 
     public void setName(String name) {
         if (name.length() >= 5 && name.length() <= 50) {
-            this.name = name; //them tilecase
+            this.name = Mylibs.toTitleCase(name); //them tilecase
         } else {
             this.name = "new vehicle";
         }
@@ -71,10 +71,10 @@ public class Vehicle {
     }
 
     public void setPrice(double price) {
-        if (price>=1 && price<=100000000) {
+        if (price >= 1 && price <= 100000000) {
             this.price = price;
         } else {
-            this.price=1;
+            this.price = 1;
         }
     }
 
