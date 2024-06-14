@@ -23,9 +23,9 @@ public abstract class Beverage {
 
     public Beverage(String id, String name, double price, int quantity) {
         setId(id);
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
+        setName(name);
+        setPrice(price);
+        setQuantity(quantity);
     }
 
     public String getId() {
@@ -46,7 +46,7 @@ public abstract class Beverage {
     }
 
     public void setName(String name) {
-        if (!name.isEmpty() && name.length() >= 5 && name.length() <= 5) {
+        if (!name.isEmpty() && name.length() >= 5 && name.length() <= 50) {
             this.name = Mylibs.toTitleCase(name);
         } else {
             this.name = "New Beverage";
